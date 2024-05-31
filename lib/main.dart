@@ -4,7 +4,9 @@ void main() {
   runApp(const MainApp());
 }
 
+/// Main Application
 class MainApp extends StatelessWidget {
+  /// Creates an instance of [MainApp]
   const MainApp({super.key});
 
   @override
