@@ -1,19 +1,18 @@
-name: self_check
-description: "A new Flutter project."
-publish_to: 'none'
+name: 'self_check'
 version: 0.1.0
-
-environment:
+publish_to: none
+environment: 
   sdk: '>=3.4.1 <4.0.0'
+description: A new Flutter project.
 
-dependencies:
-  flutter:
+dependencies: 
+  flutter: 
     sdk: flutter
 
-dev_dependencies:
-  flutter_test:
+dev_dependencies: 
+  flutter_lints: '^4.0.0'
+  flutter_test: 
     sdk: flutter
-  flutter_lints: ^3.0.0
 
-flutter:
+flutter: 
   uses-material-design: true
