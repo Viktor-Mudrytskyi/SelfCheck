@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "829364451651",
+    "project_id": "selfcheck-dev-8634b",
+    "storage_bucket": "selfcheck-dev-8634b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829364451651:android:4f8f7d1e3a1fad8bdb17f6",
+        "android_client_info": {
+          "package_name": "com.example.self_check"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4swLEOds1SipronMzQhEEkBriNaFQnwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

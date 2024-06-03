@@ -8,6 +8,11 @@ description: A new Flutter project.
 dependencies: 
   flutter: 
     sdk: flutter
+  
+  # Firebase
+  firebase_auth: ^4.20.0
+  cloud_firestore: ^4.17.5
+  firebase_core: ^2.32.0
 
 dev_dependencies: 
   flutter_lints: '^4.0.0'
