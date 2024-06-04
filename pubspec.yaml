@@ -8,7 +8,10 @@ description: A new Flutter project.
 dependencies: 
   flutter: 
     sdk: flutter
-  
+
+  # Core
+  get_it: ^7.7.0
+
   # Firebase
   firebase_auth: ^4.20.0
   cloud_firestore: ^4.17.5
