@@ -137,3 +137,6 @@ app.*.symbols
 !/dev/ci/**/Gemfile.lock
 !.vscode/settings.json
 !.vscode/launch.json
+
+# Custom
+/gen_sealed.exe

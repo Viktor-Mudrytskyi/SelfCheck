@@ -1,22 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:self_check/core/di.dart';
+import 'package:self_check/firebase_options.dart';
+import 'package:self_check/main_app.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initDI();
+  await Firebase.initializeApp(
+    name: 'SelfCheck',
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MainApp());
-}
-
-/// Main Application
-class MainApp extends StatelessWidget {
-  /// Creates an instance of [MainApp]
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
 }
