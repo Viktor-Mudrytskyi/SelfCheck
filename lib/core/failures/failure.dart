@@ -1,10 +1,10 @@
 /// Base class for failures
-abstract interface class Failure {
+abstract class Failure {
   /// Creates instance of [Failure]
-  const Failure({required this.message});
+  const Failure();
 
   /// Failure message
-  final String message;
+  String get message;
 
   @override
   String toString() {

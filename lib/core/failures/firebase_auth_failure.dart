@@ -1,4 +1,4 @@
-import 'package:self_check/core/base/failure.dart';
+import 'package:self_check/core/failures/failure.dart';
 
 /// Firebase auth base failure
 abstract base class FirebaseAuthFailure implements Failure {
@@ -8,6 +8,7 @@ abstract base class FirebaseAuthFailure implements Failure {
   /// Gets failure corresponding to the code
   factory FirebaseAuthFailure.fromCode({required String errorCode}) {
     return switch (errorCode) {
+      'invalid-credential' => WrongPasswordAuthFailure(errorCode: errorCode),
       'wrong-password' => WrongPasswordAuthFailure(errorCode: errorCode),
       'invalid-email' => InvalidEmailAuthFailure(errorCode: errorCode),
       'user-disabled' => UserDisabledAuthFailure(errorCode: errorCode),
@@ -94,5 +95,5 @@ final class UknownErrorAuthFailure extends FirebaseAuthFailure {
   const UknownErrorAuthFailure({super.errorCode = ''});
 
   @override
-  String get message => 'Weak password';
+  String get message => 'Unknown error';
 }

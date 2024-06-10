@@ -22,6 +22,29 @@ extension ContextUtils on BuildContext {
     }
     return box;
   }
+
+  ThemeData get theme => Theme.of(this);
+
+  /// Get padding of this from nearest [MediaQuery]
+  EdgeInsets get systemPadding => MediaQuery.paddingOf(this);
+
+  /// Get [Size] of [MediaQuery]
+  Size get size => MediaQuery.sizeOf(this);
+
+  void showSnackBar(String content) {
+    ScaffoldMessenger.of(this).showSnackBar(
+      SnackBar(
+        content: Text(
+          content,
+          style: const TextStyle(color: Colors.white),
+        ),
+        duration: const Duration(seconds: 2),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: theme.primaryColor,
+      ),
+    );
+  }
 }
 
 /// Utils for faster null or empty checks

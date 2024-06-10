@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:self_check/core/di.dart';
+import 'package:self_check/presentation/home/bloc/user_cubit/user_cubit.dart';
+import 'package:self_check/presentation/home/screens/home_screen.dart';
+import 'package:self_check/presentation/theme/colors_theme_data.dart';
 
 /// Main Application
 class MainApp extends StatelessWidget {
@@ -7,12 +12,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      theme: CustomThemeData().customTheme,
+      home: const HomeScreen(),
+      builder: (context, child) {
+        return BlocProvider<UserCubit>(
+          create: (context) => getIt(),
+          child: child,
+        );
+      },
     );
   }
 }

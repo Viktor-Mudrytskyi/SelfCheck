@@ -1,12 +1,12 @@
 /// A class that allows to wrap responses such as API.
-class ResponseWrapper<Success, Failure> {
-  /// Creates an instance of successful [ResponseWrapper]
-  const ResponseWrapper.success(Success this.data)
+class ApiResponse<Success, Failure> {
+  /// Creates an instance of successful [ApiResponse]
+  const ApiResponse.success(Success this.data)
       : failure = null,
         isSuccessful = true;
 
-  /// Creates an instance of failed [ResponseWrapper]
-  const ResponseWrapper.failure(Failure this.failure)
+  /// Creates an instance of failed [ApiResponse]
+  const ApiResponse.failure(Failure this.failure)
       : data = null,
         isSuccessful = false;
 
