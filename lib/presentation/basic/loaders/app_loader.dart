@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:self_check/core/extensions.dart';
 
@@ -15,6 +16,12 @@ class AppLoader extends StatelessWidget {
         radius: radius,
       ),
     );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DoubleProperty('radius', radius));
   }
 }
 
@@ -43,5 +50,11 @@ class _PlatformSpinner extends StatelessWidget {
         ),
       );
     }
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DoubleProperty('radius', radius));
   }
 }
