@@ -11,5 +11,6 @@ Future<void> main() async {
     name: 'SelfCheck',
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   runApp(const MainApp());
 }
